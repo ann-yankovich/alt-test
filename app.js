@@ -9,6 +9,9 @@ var logName = require('./src/modules/name/log');
 var nameStore = require('./src/stores/NameStore');
 
 (function(){
-    setName();
+
+    var DELAY = 5000;
+
+    setName(DELAY);
     nameStore.listen(logName);
 })();
