@@ -1,13 +1,14 @@
+// var requirejs = require('requirejs');
+//
 // requirejs.config({
-//     baseUrl: './src/',
-//     name: 'main',
-//     // nodeRequire: require
+//     baseUrl: './src/'
 // });
 
 var setName = require('./src/modules/name/set');
 var logName = require('./src/modules/name/log');
+var nameStore = require('./src/stores/NameStore');
 
 (function(){
     setName();
-    logName();
+    nameStore.listen(logName);
 })();

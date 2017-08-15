@@ -8,10 +8,6 @@ function NameActions() {
         return names[index];
     }
 
-    this.logName = function(name){
-        console.log('logName', arguments);
-        console.log('logName', name);
-    }
 }
 
 

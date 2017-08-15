@@ -1,9 +1,6 @@
-var NameActions = require('../../../actions/NameActions');
-var NameStore = require('../../../stores/NameStore');
 
-function logName() {
-   // console.log( NameStore.getState() );
-    NameActions.logName();
+function logName(state) {
+    console.log(state.name);
 }
 
 module.exports = logName;
