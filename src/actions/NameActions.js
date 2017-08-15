@@ -9,8 +9,10 @@ function NameActions() {
     }
 
     this.logName = function(name){
+        console.log('logName', arguments);
         console.log('logName', name);
     }
 }
+
 
 module.exports = alt.createActions(NameActions);
