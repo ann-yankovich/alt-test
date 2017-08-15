@@ -2,7 +2,6 @@ var alt = require('../alt');
 var NameActions = require('../actions/NameActions');
 
 function NameStore() {
-    // console.log(NameActions);
     this.name = '';
 
     this.bindListeners({
@@ -15,13 +14,10 @@ function NameStore() {
 
 NameStore.prototype.handleUpdateName = function(name) {
     this.name = name;
-    console.log('handleUpdateName', this.name);
 };
 
 NameStore.prototype.handleLogName = function() {
-    console.log('handleLogName', this.name);
-    // return this.name;
-    // alt.dispatch(this.getState());
+    return this.name
 };
 
 module.exports = alt.createStore(NameStore, 'NameStore');
