@@ -1,6 +1,9 @@
+var nameStore = require('../../../stores/NameStore');
 
-function logName(state) {
-    console.log(state.name);
+function logName() {
+    nameStore.listen(function(state){
+        console.log(state.name);
+    });
 }
 
 module.exports = logName;
